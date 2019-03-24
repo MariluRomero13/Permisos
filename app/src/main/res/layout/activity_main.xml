@@ -4,19 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="40sp"
+    android:layout_marginRight="40sp"
+    android:layout_marginTop="15sp"
     tools:context=".MainActivity">
 
-   <Button
+   <RelativeLayout
+       android:id="@+id/rlvone"
        android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="Camera"
-       android:id="@+id/btncamera"/>
+       android:orientation="vertical"
+       android:layout_height="wrap_content">
 
-    <Button
+       <TextView
+           android:text="Cámara"
+           android:textSize="20sp"
+           android:textColor="#000000"
+           android:id="@+id/tvcamara"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+
+       <Switch
+           android:layout_alignParentEnd="true"
+           android:id="@+id/camaraSwitch"
+           android:layout_width="wrap_content"
+           android:checked="false"
+           android:layout_height="wrap_content"/>
+
+   </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlvtwo"
+        android:layout_below="@id/rlvone"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="GPS"
-        android:layout_below="@id/btncamera"
-        android:id="@+id/btngps"/>
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Telefóno"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:id="@+id/tvinternet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Switch
+            android:layout_alignParentEnd="true"
+            android:id="@+id/audioSwitch"
+            android:layout_width="wrap_content"
+            android:checked="false"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/rlvtwo"
+        android:id="@+id/rlvthree"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Ubicación"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:id="@+id/tvubicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Switch
+            android:layout_alignParentEnd="true"
+            android:id="@+id/ubicacionSwitch"
+            android:layout_width="wrap_content"
+            android:checked="false"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
 
 </RelativeLayout>
